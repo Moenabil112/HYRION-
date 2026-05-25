@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HYRION — Vision Book · Al-Mada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- =====================================================
+     TOP BAR
+     ===================================================== -->
+<header class="topbar" data-screen-label="Top bar">
+  <div class="left">
+    <span class="brand-mark">HYRION</span>
+    <span class="sep" style="opacity:0.4">·</span>
+  </div>
+  <div class="right">
+    <span class="ref-chip"><span class="dot"></span>MADA · VB · 002</span>
+    <div class="lang-toggle">
+      <button class="active" data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ar">AR</button>
+    </div>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<!-- =====================================================
+     SIDE RAIL TOC
+     ===================================================== -->
+<nav class="siderail" id="siderail">
+  <a href="#cover"><span class="tick"></span><span class="label">Couverture</span></a>
+  <a href="#index"><span class="tick"></span><span class="label">Sommaire</span></a>
+  <a href="#observation"><span class="tick"></span><span class="label">01 · Observation</span></a>
+  <a href="#identity"><span class="tick"></span><span class="label">02 · Qui nous sommes</span></a>
+  <a href="#infrastructure"><span class="tick"></span><span class="label">03 · Infrastructure</span></a>
+  <a href="#value"><span class="tick"></span><span class="label">04 · Valeur</span></a>
+  <a href="#partnership"><span class="tick"></span><span class="label">05 · Partenariat</span></a>
+  <a href="#advisor"><span class="tick"></span><span class="label">06 · Conseiller</span></a>
+  <a href="#closing"><span class="tick"></span><span class="label">07 · Clôture</span></a>
+</nav>
+
+<!-- =====================================================
+     TELEMETRY CHIP
+     ===================================================== -->
+<aside class="telemetry" id="telemetry" aria-label="Telemetry du document">
+  <div class="hed">Document tracé · en direct</div>
+  <div class="row"><span class="k">Référence</span><span class="v">MADA-VB-002</span></div>
+  <div class="row"><span class="k">Session</span><span class="v live">Active</span></div>
+  <div class="row"><span class="k">Lecture</span><span class="v" id="t-read">00:00</span></div>
+  <div class="row"><span class="k">Section</span><span class="v" id="t-section">Couverture</span></div>
+  <div class="row"><span class="k">Progression</span><span class="v" id="t-pct">0 %</span></div>
+</aside>
+
+<main>
+
+<!-- =====================================================
+     §  COVER
+     ===================================================== -->
+<section class="page hero" id="cover" data-screen-label="Cover">
+  <div class="wrap hero-inner">
+
+    <div class="hero-left">
+      <div class="eyebrow" style="margin-bottom:24px">Vision Book · v2.0 · Mai 2026</div>
+      <div class="wordmark">HYRI<span class="accent">O</span>N</div>
+      <p class="tagline">La gouvernance numérique d'un portefeuille minier stratégique.<br/>Infrastructure, pas application. Lisibilité, pas reporting.</p>
+
+      <div class="meta">
+        <div><span class="k">Émetteur</span><span class="v">AKANIL D&amp;I</span></div>
+        <div><span class="k">Géographies</span><span class="v">MA · KSA · SDN</span></div>
+        <div><span class="k">Registre</span><span class="v">Institutionnel</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="recipient">Conçu pour</div>
+      <div class="recipient-name">Groupe Al-Mada<br/><span style="font-size:18px;color:var(--paper-mute)">— et sa filiale Managem</span></div>
+
+      <div class="partners">
+        <div class="partner-card akanil">
+          <img src="assets/akanil-logo.png" alt="AKANIL" />
+        </div>
+        <div class="partner-card almada">
+          <img src="assets/almada-logo.png" alt="Al-Mada" />
+        </div>
+      </div>
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.18em;color:var(--paper-faint);text-transform:uppercase">Émetteur &nbsp;·&nbsp; Destinataire</div>
+    </div>
+
+  </div>
+
+  <div class="wrap hero-foot">
+    <div>Document tracé · accès enregistré · révocable</div>
+    <a href="#index" class="scroll-cue">Parcourir le livret <span class="arrow"></span></a>
+    <div>HYRION © AKANIL 2026</div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  INDEX / TOC
+     ===================================================== -->
+<section class="page toc" id="index" data-screen-label="00 Sommaire">
+  <div class="wrap">
+    <div class="page-num">00 · Sommaire</div>
+    <div class="toc-grid">
+      <div>
+        <h2>Sept mouvements, une seule infrastructure.</h2>
+        <div class="rule-brass" style="margin-top:24px"></div>
+        <p style="margin-top:24px;font-family:var(--serif);font-style:italic;color:var(--paper-mute)">Un système qui vend la gouvernance par la preuve doit lui-même être gouverné par la preuve. Ce livret s'ouvre dans l'ordre où une décision se prend : observer, identifier l'opérateur, examiner l'infrastructure, mesurer la valeur, cadrer la relation.</p>
+      </div>
+      <div class="toc-list">
+        <a class="toc-item" href="#observation">
+          <span class="num">01</span>
+          <span class="title">L'observation<span class="sub">Lisibilité, pas valeur — ce que cherche le capital saoudien</span></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="toc-item" href="#identity">
+          <span class="num">02</span>
+          <span class="title">Qui nous sommes<span class="sub">AKANIL · Trois affirmations, trois preuves</span></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="toc-item" href="#infrastructure">
+          <span class="num">03</span>
+          <span class="title">HYRION : l'infrastructure<span class="sub">Quatre fonctions · déjà en opération sur ATLAS</span></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="toc-item" href="#value">
+          <span class="num">04</span>
+          <span class="title">La valeur pour Al-Mada<span class="sub">De la gouvernance interne au leadership régional</span></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="toc-item" href="#partnership">
+          <span class="num">05</span>
+          <span class="title">Modèle de partenariat<span class="sub">Trois phases · audit 30 jours → pilote → stratégique</span></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="toc-item" href="#advisor">
+          <span class="num">06</span>
+          <span class="title">Le rôle du conseiller stratégique<span class="sub">Un mandat, pas un emploi</span></span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="toc-item" href="#closing">
+          <span class="num">07</span>
+          <span class="title">Clôture<span class="sub">Quel actif souhaitez-vous voir lu avec précision ?</span></span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  01 OBSERVATION
+     ===================================================== -->
+<section class="page" id="observation" data-screen-label="01 Observation">
+  <div class="wrap">
+    <div class="page-num">01 · L'observation</div>
+    <h2>Les portefeuilles miniers n'ont pas un problème de valeur.<br/><span style="color:var(--brass)">Ils ont un problème de lisibilité.</span></h2>
+
+    <div class="two-col" style="margin-top:48px">
+      <p>Il y a une question que les directions stratégiques des grandes holdings minières ne posent jamais à voix haute — parce que la réponse est inconfortable. <strong>Combien de temps faut-il aujourd'hui, dans votre organisation, pour préparer une data room complète et vérifiable pour un partenaire institutionnel saoudien?</strong> Pas une présentation PowerPoint. Pas un résumé de deux pages — une data room réelle, avec preuves géologiques, historique opérationnel, statut des permis, résultats d'analyse, et documentation des lacunes.</p>
+      <p>Si la réponse se compte en semaines, le problème n'est pas la qualité des actifs. Les actifs de Managem ont une valeur réelle, construite sur des décennies de présence terrain sur plusieurs continents. Le problème est ailleurs — dans l'architecture de gouvernance qui organise cette valeur et la rend lisible à l'extérieur. Il se mesure en cycles de due diligence trop longs, en partenariats qui n'atteignent pas la table de négociation, en capital stratégique qui va vers des actifs moins bons mais mieux gouvernés.</p>
+    </div>
+
+    <div class="arquote">
+      <div class="fr">Un portefeuille minier ne se lit pas avec les yeux du chercheur d'or.<br/>Il se lit avec les données de celui qui sait ce qu'il tient.</div>
+    </div>
+
+    <div class="callout">
+      Le capital saoudien ne cherche pas du potentiel. Il dispose de trente milliards de dollars alloués au secteur minier — et il cherche des actifs gouvernés avec une rigueur qui justifie le déploiement. La gouvernance n'est pas un prérequis administratif. C'est le langage dans lequel les décisions se prennent.
+    </div>
+
+    <p style="margin-top:36px"><strong>HYRION est l'infrastructure qui permet à un portefeuille de la taille de Managem de parler ce langage couramment.</strong></p>
+
+    <div class="ruler"></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  02 IDENTITY (Akanil)
+     ===================================================== -->
+<section class="page" id="identity" data-screen-label="02 Qui nous sommes">
+  <div class="wrap">
+    <div class="page-num">02 · Qui nous sommes</div>
+    <h2>AKANIL n'est pas une entreprise qui a étudié les marchés extractifs.<br/><span style="color:var(--brass)">C'est une institution construite en les traversant.</span></h2>
+
+    <p class="lede" style="margin-top:40px">Douze ans d'opérations continues — à travers des cycles politiques, des instabilités économiques, des environnements réglementaires changeants. Le type de conditions qui révèle si une méthodologie tient ou non. Trois affirmations. Trois preuves.</p>
+
+    <div class="identity-grid">
+      <div>
+        <p>En 2023, AKANIL a structuré et obtenu cinq titres miniers dans la région de Béni Mellal au Maroc — quatre permis de recherche et une licence d'exploitation active, tous renouvelés jusqu'en 2028 par la Direction Régionale de la Transition Énergétique. La licence d'exploitation <strong>LE 353294</strong> couvre neuf indices cuprifères dont deux ont été exploités par des fosses, produisant un volume extrait estimé à trois cents tonnes de minerai de cuivre documentées — avec coordonnées GPS, relevés de terrain, échantillons en chaîne de custody, et rapport géologique à l'échelle 1:10 000. Ce n'est pas une référence sur un CV — c'est un dossier consultable.</p>
+
+        <div class="callout" style="margin-top:32px">
+          AKANIL n'est pas une startup qui cherche un investisseur. C'est une institution opérationnelle qui propose une infrastructure — bâtie en traversant des contraintes réelles, pas en les étudiant.
+        </div>
+
+        <div class="expertise">
+          <div class="label">L'équipe derrière HYRION</div>
+          <ul>
+            <li>Géologues de terrain avec expérience multi-pays</li>
+            <li>Data scientists spécialisés dans l'analyse minérale</li>
+            <li>Architectes de systèmes d'information appliqués aux opérations minières</li>
+            <li>Juristes familiers du droit minier marocain et régional</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow" style="margin-bottom:18px">Ancrage opérationnel</div>
+        <div class="geos">
+          <div class="geo">
+            <span class="yr">2014</span>
+            <span class="where">Maroc</span>
+            <span class="what">5 titres miniers · Béni Mellal</span>
+          </div>
+          <div class="geo">
+            <span class="yr">2018</span>
+            <span class="where">Arabie Saoudite</span>
+            <span class="what">QASSAS · MVP livré FMF 2026</span>
+          </div>
+          <div class="geo">
+            <span class="yr">2021</span>
+            <span class="where">Soudan</span>
+            <span class="what">500 000 mineurs documentés · 5 États</span>
+          </div>
+        </div>
+
+        <div class="mono-block" style="margin-top:28px">
+<span class="accent">// la triple intersection</span>
+Le fondateur est né en Arabie Saoudite.
+Il n'analyse pas le marché du Golfe — il en est originaire.
+Ses racines soudano-marocaines donnent un accès
+opérationnel réel aux marchés africains.
+Ce n'est pas une biographie — c'est ce qui rend
+HYRION possible.
+        </div>
+      </div>
+    </div>
+
+    <div class="ruler"></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  03 INFRASTRUCTURE
+     ===================================================== -->
+<section class="page" id="infrastructure" data-screen-label="03 Infrastructure">
+  <div class="wrap">
+    <div class="page-num">03 · HYRION · L'infrastructure</div>
+    <h2>Quatre fonctions.<br/>Non négociables pour un portefeuille de l'échelle de Managem.</h2>
+
+    <p class="lede" style="margin-top:32px">HYRION n'est pas un système qui attend d'être déployé. Il est en opération sur le portefeuille <strong>ATLAS</strong> — cinq sites minières réels dans le Haut Atlas marocain, avec des données géologiques réelles et des lacunes identifiées avec précision.</p>
+
+    <div class="functions">
+
+      <!-- 3.1 -->
+      <div class="func">
+        <div class="idx">01</div>
+        <h3>Index d'évidence</h3>
+        <div class="problem">Le problème · Données dispersees, lacunes invisibles avant la due diligence</div>
+        <div class="body">Pour chaque actif, l'index cartographie l'intégralité des preuves disponibles en <strong>douze catégories normalisées</strong>. Ce qui est documenté l'est explicitement. Ce qui ne l'est pas apparaît comme une lacune identifiée — pas comme une zone grise. Sur ATLAS, cette carte a identifié trois lacunes critiques en quarante-huit heures — quand elles peuvent encore être comblées, pas pendant une due diligence externe.</div>
+      </div>
+
+      <!-- 3.2 -->
+      <div class="func">
+        <div class="idx">02</div>
+        <h3>Data Room contrôlée</h3>
+        <div class="problem">Le problème · Divulgation sensible, trop peu ou trop d'exposition</div>
+        <div class="levels" style="margin-top:8px">
+          <div class="level"><span class="lk">N1 · OUVERT</span><span class="lv">Géographie · catégories de minéraux · contexte</span></div>
+          <div class="level"><span class="lk">N2 · NDA</span><span class="lv">Résumés techniques · permis · programme</span></div>
+          <div class="level"><span class="lk">N3 · QUALI</span><span class="lv">Données géologiques · ICP · ingénierie</span></div>
+          <div class="level"><span class="lk">N4 · DD</span><span class="lv">Documentation complète · contrats · budget</span></div>
+        </div>
+        <div class="body" style="margin-top:auto">Chaque accès est horodaté, associé à l'identité du destinataire, et révocable à tout moment. La data room ne décide pas ce qu'on divulgue — elle documente ce qui a été divulgué, à qui, et dans quel contexte.</div>
+      </div>
+
+      <!-- 3.3 -->
+      <div class="func">
+        <div class="idx">03</div>
+        <h3>Portes de décision</h3>
+        <div class="problem">Le problème · Avancements basés sur l'intuition et la synthèse manuelle</div>
+        <div class="body"><strong>Sept portes standardisées</strong>, de la vérification des titres jusqu'à la production nette vérifiable. Chaque porte a ses preuves requises. L'avancement n'est pas accordé par un comité — il est constaté par le système à partir des documents téléchargés. Sur ATLAS, deux portes sont franchies avec preuves complètes à ce jour.</div>
+
+        <div class="mono-block" style="margin-top:auto;font-size:11px;padding:14px 18px">
+<span class="accent">G1</span> Vérification juridique  <span class="teal">✓ documenté</span>
+<span class="accent">G2</span> Index d'évidence        <span class="teal">✓ documenté</span>
+<span class="accent">G3</span> Vérif. géologique ind.   <span style="color:var(--brass-glow)">○ en cours</span>
+<span class="accent">G4</span> Analyses laboratoire    <span style="color:var(--brass-glow)">○ en cours</span>
+<span class="accent">G5–7</span> Faisabilité → prod.   <span style="color:var(--paper-faint)">— conditionné</span>
+        </div>
+      </div>
+
+      <!-- 3.4 -->
+      <div class="func">
+        <div class="idx">04</div>
+        <h3>Vue consolidée du portefeuille</h3>
+        <div class="problem">Le problème · Aucune vision consolidée temps réel pour la direction</div>
+        <div class="body">Une interface unique qui agrège en temps réel toutes les données actives — statut des permis, avancement des programmes, résultats d'analyse terrain, prochaines échéances réglementaires. <strong>Pas de rapport manuel. Pas de synthèse hebdomadaire construite à la main.</strong> La direction dispose de la même vue que le terrain — en permanence.</div>
+        <div class="body" style="margin-top:8px;font-style:italic;color:var(--paper-mute)">Plusieurs sites · plusieurs minéraux · plusieurs géographies — une lecture.</div>
+      </div>
+
+    </div>
+
+    <div class="ruler"></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  04 VALUE
+     ===================================================== -->
+<section class="page" id="value" data-screen-label="04 Valeur">
+  <div class="wrap">
+    <div class="page-num">04 · La valeur pour Al-Mada</div>
+    <h2>Quatre dimensions.<br/><span style="color:var(--brass)">Du chantier interne au leadership régional.</span></h2>
+
+    <p class="lede" style="margin-top:32px">Ce que HYRION a fait pour cinq sites dans le Haut Atlas marocain, il peut le faire pour un portefeuille de la taille de Managem. La différence n'est pas de nature — elle est d'échelle.</p>
+
+    <div class="dimensions">
+
+      <div class="dim">
+        <div class="marker">i</div>
+        <div>
+          <h3>Gouvernance interne de Managem</h3>
+          <div class="body">
+            <p>Le délai de préparation d'une data room complète passe de semaines à heures. Pas parce que le travail disparaît — mais parce qu'il a été fait en continu, pas en urgence avant chaque conversation externe. Les décisions reposent sur des systèmes, pas sur les individus qui portent la connaissance.</p>
+          </div>
+        </div>
+        <div class="pull">
+          <span class="label">Indicateur concret</span>
+          Délai moyen demande de data room → livraison dossier complet :<br/><br/>
+          <span style="font-family:var(--serif);font-size:24px;color:var(--paper)">semaines</span> &nbsp;→&nbsp; <span style="font-family:var(--serif);font-size:24px;color:var(--teal)">heures</span>
+        </div>
+      </div>
+
+      <div class="dim">
+        <div class="marker">ii</div>
+        <div>
+          <h3>Le pont marocain-saoudien</h3>
+          <div class="body">
+            <p>Le capital saoudien arrive avec un cahier des charges précis : <strong>gouvernance documentée, traçabilité des données, standards de due diligence alignés sur les pratiques institutionnelles internationales</strong>. HYRION n'améliore pas la présentation du portefeuille d'Al-Mada — il le traduit dans le langage que PIF, Manara Minerals et Ma'aden utilisent pour prendre leurs décisions.</p>
+          </div>
+        </div>
+        <div class="pull" style="border-left-color:var(--teal)">
+          <span class="label" style="color:var(--teal)">La traduction</span><span style="font-family:var(--serif);font-style:italic;font-size:13px;color:var(--paper-mute);margin-top:10px;display:block">HYRION ne présente pas le portefeuille — il le traduit dans la langue de l'investisseur stratégique.</span>
+        </div>
+      </div>
+
+      <div class="dim">
+        <div class="marker">iii</div>
+        <div>
+          <h3>L'extension africaine — transformer les actifs en actifs finançables</h3>
+          <div class="body">
+            <p>Les actifs miniers africains souffrent d'un déficit de confiance structurel sans rapport avec leur valeur intrinsèque. Il est lié à la perception de leur gouvernance.</p>
+            <p>AKANIL dispose de réseaux opérationnels réels dans les géographies minières africaines — construits sur des années, pas sur des projets. <strong>Ce réseau, combiné à l'infrastructure HYRION, transforme des actifs prometteurs en actifs finançables selon des critères vérifiables.</strong></p>
+          </div>
+        </div>
+        <div class="pull">
+          <span class="label">Bénéfice</span>
+          Le portefeuille africain d'Al-Mada devient <strong style="color:var(--paper)">lisible</strong> sous le même protocole que les actifs marocains — sans réécriture, sans intermédiaire, sans risque réputationnel.
+        </div>
+      </div>
+
+      <div class="dim">
+        <div class="marker">iv</div>
+        <div>
+          <h3>Leadership dans la gouvernance minière numérique au Maroc</h3>
+          <div class="body">
+            <p>Les termes du partenariat stratégique maroco-saoudien dans le secteur minier ne sont pas encore fixés. <strong>Les acteurs qui établissent les standards de gouvernance numérique maintenant occupent une position différente de ceux qui s'y adapteront dans trois ans.</strong></p>
+            <p>Al-Mada possède la taille, l'histoire et le portefeuille pour être le référent marocain — puis régional.</p>
+          </div>
+        </div>
+        <div class="pull">
+          <span class="label">Horizon</span>
+          Standard marocain &nbsp;→&nbsp; standard maghrébin &nbsp;→&nbsp; standard de la zone PIF/Manara pour les actifs africains.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ruler"></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  05 PARTNERSHIP
+     ===================================================== -->
+<section class="page" id="partnership" data-screen-label="05 Partenariat">
+  <div class="wrap">
+    <div class="page-num">05 · Modèle de partenariat</div>
+    <h2>Trois phases. Une logique :<br/><span style="color:var(--brass)">chaque phase produit une valeur indépendante qui justifie la suivante.</span></h2>
+
+    <p class="lede" style="margin-top:32px">Al-Mada ne rachète pas HYRION — elle co-construit la version adaptée à son portefeuille. Et obtient, en contrepartie, un droit exclusif de déploiement au Maroc et en Afrique subsaharienne.</p>
+
+    <div class="timeline">
+      <div class="phase active">
+        <div class="marker"></div>
+        <div class="num">Phase 01</div>
+        <div class="dur">30 jours · audit</div>
+        <h3>L'audit HYRION sur un actif Managem</h3>
+        <div class="body">Managem désigne un site. HYRION construit son index d'évidence complet — les douze catégories, le statut de chaque preuve, les lacunes identifiées, et les actions prioritaires avant toute présentation externe. <strong>Si l'index n'apporte pas de valeur immédiate identifiable, la conversation s'arrête là</strong> — sans frais et sans engagement.</div>
+        <div class="deliv">
+          <span class="label">Livrable</span>
+          Un document de gouvernance réel sur un actif réel. Pas une démonstration — un résultat.
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="marker"></div>
+        <div class="num">Phase 02</div>
+        <div class="dur">6–12 mois · pilote</div>
+        <h3>Déploiement pilote</h3>
+        <div class="body">Application sur deux à trois sites du portefeuille. Construction de leurs data rooms respectives selon quatre niveaux d'accès. Mise en place des portes de décision adaptées aux priorités de Managem. Formation des équipes internes à la gestion du système.</div>
+        <div class="deliv">
+          <span class="label">Livrable</span>
+          Le modèle HYRION × Managem — documenté comme cas de référence pour l'ensemble des discussions avec les partenaires saoudiens. Ce cas appartient à Al-Mada.
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="marker"></div>
+        <div class="num">Phase 03</div>
+        <div class="dur">Long terme · stratégique</div>
+        <h3>Partenariat stratégique</h3>
+        <div class="body">Déploiement sur l'ensemble du portefeuille. Droit exclusif de déploiement HYRION au Maroc et en Afrique subsaharienne. Participation au développement de la version marché saoudien. Cadre commercial à long terme défini à l'issue de la phase 2 — pas avant.</div>
+        <div class="deliv">
+          <span class="label">Livrable</span>
+          Infrastructure permanente + position de leadership régionale.
+        </div>
+      </div>
+    </div>
+
+    <div class="ruler"></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  06 ADVISOR
+     ===================================================== -->
+<section class="page" id="advisor" data-screen-label="06 Conseiller">
+  <div class="wrap">
+    <div class="page-num">06 · Le rôle du conseiller stratégique</div>
+    <h2>Un mandat. Pas un emploi.<br/><span style="color:var(--brass)">Une relation indexée sur les résultats — pas sur le poste.</span></h2>
+
+    <p class="lede" style="margin-top:32px">Un mandat de douze mois renouvelables avec des livrables mesurables. AKANIL reste opérationnellement indépendante — sa crédibilité régionale en dépend.</p>
+
+    <div class="mandate">
+      <div class="mandate-col">
+        <h4>Périmètre du mandat</h4>
+        <ul>
+          <li><span class="marker">→</span><span>Conception et déploiement de HYRION dans la structure Al-Mada</span></li>
+          <li><span class="marker">→</span><span>Pilotage de la stratégie de pont Maroc – Arabie Saoudite — interface avec PIF, Manara, Ma'aden</span></li>
+          <li><span class="marker">→</span><span>Développement des modèles de partenariat trilatéraux (Al-Mada × AKANIL × partenaire saoudien)</span></li>
+          <li><span class="marker">→</span><span>Mesure et reporting d'impact : gouvernance, positionnement, transactions</span></li>
+        </ul>
+      </div>
+      <div class="mandate-col">
+        <h4>Structure</h4>
+        <ul>
+          <li><span class="marker">·</span><span>Mandat de conseil (retainer) — pas d'emploi</span></li>
+          <li><span class="marker">·</span><span>Durée : 12 mois renouvelables</span></li>
+          <li><span class="marker">·</span><span>KPIs clairs liés aux phases de déploiement</span></li>
+          <li><span class="marker">·</span><span>Liberté opérationnelle maintenue pour AKANIL</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:48px">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px;color:var(--brass)">Pour Al-Mada</div>
+        <p>Vous n'ajoutez pas un employé. Vous accédez à un réseau opérationnel régional, à une expertise qui n'existe pas en interne, et à une méthodologie construite sur le terrain — liés à des résultats, pas à un salaire.</p>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px;color:var(--brass)">Pour AKANIL</div>
+        <p>Notre crédibilité dans la région repose sur notre indépendance. Un ancrage institutionnel avec Al-Mada renforce notre positionnement sans compromettre notre liberté de mouvement.</p>
+      </div>
+    </div>
+
+    <div class="arquote" style="margin-top:64px">
+      <div class="fr">Le siège de conseiller stratégique n'est pas un poste —<br/>c'est un cadre pour une relation construite sur les résultats, pas sur le titre.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     §  07 CLOSING
+     ===================================================== -->
+<section class="page closing" id="closing" data-screen-label="07 Clôture">
+  <div class="wrap">
+    <div class="stamp">07 · Clôture</div>
+    <h2>Nous n'avons pas décrit un système qui pourrait fonctionner.<br/><span style="color:var(--brass)">Nous avons décrit un système qui fonctionne.</span></h2>
+
+
+    <div style="font-family:var(--serif);font-style:italic;color:var(--paper-mute);font-size:18px;max-width:720px;margin-top:32px">Sur cinq sites réels, avec des données géologiques réelles, trois cents tonnes de minerai extrait documentées, vingt échantillons en analyse ICP, des lacunes identifiées avec précision, et des portes de décision dont deux sont franchies avec preuves complètes à ce jour. Ce niveau de détail n'est pas de la transparence stratégique — c'est de la cohérence : un système qui vend la gouvernance par la preuve doit lui-même être gouverné par la preuve.</div>
+
+    <div class="next">
+      <div class="label">La prochaine étape</div>
+      <div class="ask">Désignez un actif Managem.<br/>Nous construisons son index d'évidence en trente jours.<br/>Vous évaluez le résultat. La décision vous appartient entièrement.</div>
+    </div>
+
+    <a href="mailto:akanil.consulting@pm.me?subject=HYRION%20%C3%97%20Al-Mada%20%E2%80%94%20audit%2030%20jours" class="cta">
+      Demander l'audit 30 jours <span class="arrow"></span>
+    </a>
+
+    <div style="margin-top:48px;font-family:var(--mono);font-size:10px;letter-spacing:0.24em;color:var(--paper-faint);text-transform:uppercase">Quel actif souhaitez-vous voir lu avec précision ?</div>
+  </div>
+</section>
+
+</main>
+
+<!-- =====================================================
+     COLOPHON
+     ===================================================== -->
+<footer class="colophon" data-screen-label="Colophon">
+  <div class="colophon-grid">
+    <div class="colophon-col">
+      <div class="signature"><img src="assets/akanil-logo.png" alt="AKANIL" /></div>
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.18em;color:var(--paper-mute);margin-top:6px">Development &amp; Investment</div>
+      <div style="font-family:var(--serif);font-style:italic;font-size:13px;color:var(--paper-faint);margin-top:14px;max-width:340px">Identité ancrée — infrastructure réelle — partenariat aux résultats.</div>
+    </div>
+    <div class="colophon-col">
+      <span class="label">Référence</span>
+      <div class="v"><span class="brass">MADA · VB · 002</span><br/>Version 2.0<br/>Mai 2026</div>
+    </div>
+    <div class="colophon-col">
+      <span class="label">Accès</span>
+      <div class="v"><span class="teal">hyrion.akanil.com/mada</span><br/>Lien tracé · sans mot de passe<br/>Modifiable sans réémission</div>
+    </div>
+    <div class="colophon-col">
+      <span class="label">Contact</span>
+      <div class="v">Via conseiller stratégique<br/>akanil.consulting@pm.me<br/>Casablanca · Riyad</div>
+    </div>
+  </div>
+  <div class="wrap ref-final">
+    <span>HYRION © AKANIL 2026 · Propriété intellectuelle protégée</span>
+    <span>Document numérique tracé · Ref MADA-VB-002</span>
+    <span>Pour relecture institutionnelle</span>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
